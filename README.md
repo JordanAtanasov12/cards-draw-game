@@ -8,6 +8,7 @@ This is a simple task to create a suitable single page application front-end inc
  * interrogating an API - namely the **Deck of Cards API** (https://deckofcardsapi.com)
  * logic
  * displaying text and images
+ * testing
 
 The solution **must** use HTML, CSS and JavaScript. You can use whatever framework or dependencies you require - e.g. React, Vue.js, Bootstrap, Tailwind CSS. You could even use no external dependencies - it's up to you.
 
@@ -40,7 +41,7 @@ The solution **must** use HTML, CSS and JavaScript. You can use whatever framewo
 Here's what you'll need to send us:
 
  * A link to a **public** GitHub repo that you have created, containing the code
- * It should contain a suite of unit tests (using whichever test framework you prefer)
+ * It should contain a suite of tests (using whichever test framework you prefer)
  * It should also contain a README.md file explaining how to run the app and its tests
 
 **The task should take no longer than 2.5 hours.**
