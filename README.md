@@ -23,6 +23,7 @@ The solution **must** use HTML, CSS and JavaScript. You can use whatever framewo
  * If the _suit_ of the newly drawn card matches the previous one, display the message `SNAP SUIT!`
  * If neither the value nor suit match, display no message
  * Once all 52 cards have been drawn, remove the button and instead display the total number of value matches and the total number of suit matches
+ * A suite of suitable tests should be created for these requirements
 
 ## UI Wireframes
 
