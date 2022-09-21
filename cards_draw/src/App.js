@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Card from "./components/Card";
 
 const App = () => {
+
   const { data, error, isError, isLoading } = CardsDeck.useNewDeck();
   //const [deckId, setDeckId] = useState({});
 
@@ -16,11 +17,12 @@ const App = () => {
   if (isError) {
     return <div>Error! {error.message}</div>
   }
-  
+
   return (
-    <div>
-     <Card props={data.deck_id}/>
-    </div>
+    <>
+        <Card deckId={data.deck_id}/>
+    </>
+
   );
 }
 

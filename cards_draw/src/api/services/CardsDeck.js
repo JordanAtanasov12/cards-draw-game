@@ -9,5 +9,9 @@ export default {
       } catch (error) {
         return Promise.reject(error);
       }
-    }),
+    },
+      {
+        staleTime: Infinity
+      }
+    ),
 };

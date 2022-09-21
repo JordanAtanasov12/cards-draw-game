@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+
+.cards-container {
+  display: flex;
+  margin: auto;
+  height: 75vh;
+}
+
+.card {
+  margin: auto;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.message-box {
+  text-align: center;
+  margin-top: 1%;
+  font-weight: bolder;
+}
+
+div.cards-container > div {
+  margin: auto;
+  height: 316px;
+  width: 226px;
+  border: 1px solid #282c34;
+  border-radius: 10px;
+}
+
+div > button {
+  background-color:#018cff;;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large  ;
+}
+
+div > img {
+  margin: auto;
+}
+
