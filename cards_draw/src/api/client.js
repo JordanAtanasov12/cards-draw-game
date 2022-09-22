@@ -5,13 +5,13 @@ const client = ky.extend({
   hooks: {
     beforeRequest: [
       (request) => {
-        // Do something before every request
+        // Here we can do  something before every request
         // This is a good place to authorize request if needed
       }
     ],
     afterResponse: [
       (response) => {
-        // Do something after every response
+        // Here we can do something after every response
         // For example, check status code etc...
       }
     ]

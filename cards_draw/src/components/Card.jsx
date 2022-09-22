@@ -20,12 +20,7 @@ const Card = (props) => {
 
 
 
-    useEffect(() => {
-        if (status === 'success') {
-            console.log(JSON.stringify(data));
-        }
-    }, [status, data]);
-
+    //adding a draw sound
     const cardSound = new Audio(cardDrawSound);
 
 
