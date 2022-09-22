@@ -5,7 +5,6 @@ import cardDrawSound from "../resources/card-draw.mp3";
 
 const Card = (props) => {
 
-    // Using state variables as we don't want to use any 'let' statements
     const { status, data, error, isError, isLoading, refetch } = DrawCard.useNewDraw(props.deckId);
     const [oldCard, setOldCard] = useState("");
     const [newCard, setNewCard] = useState("");
