@@ -5,6 +5,7 @@ import cardDrawSound from "../resources/card-draw.mp3";
 
 const Card = (props) => {
 
+    // Using state variables as we don't want to use any 'let' statements
     const { status, data, error, isError, isLoading, refetch } = DrawCard.useNewDraw(props.deckId);
     const [oldCard, setOldCard] = useState("");
     const [newCard, setNewCard] = useState("");
@@ -32,6 +33,10 @@ const Card = (props) => {
     }
 
     const CalcSuitMatchProbability = (drawnSuitCards) => {
+        /*
+            To calculate the probability for a suit match we need to divide the avaiable cards of the respective color 
+            by the reaming cards in the deck
+         */
         return (26 - drawnSuitCards) / (TOTAL_DECK - currentCardCount);
     }
 
@@ -41,6 +46,7 @@ const Card = (props) => {
 
         cardSound.play();
 
+        //Implement NEW/OLD card logic and populate placeholders
         if (newCard == "") {
             setNewCard(data);
         }
@@ -48,20 +54,25 @@ const Card = (props) => {
             setOldCard(newCard);
             setNewCard(data);
 
+            //Check for a Suit Match and display the message
             if (data.cards[0].suit == newCard.cards[0].suit) {
                 setMatchMessage(SUIT_MATCH);
                 setSuitMatches(suitMatches + 1);
             }
-            else if (data.cards[0].value == newCard.cards[0].value) {
+
+            //Check for a Value Match and display the message
+            else if (data && data.cards[0].value == newCard.cards[0].value) {
                 setMatchMessage(VALUE_MATCH);
                 setValueMatches(valueMatches + 1);
             }
             else {
                 setMatchMessage("");
             }
+
+            //Count the drawn cards
             setCurrentCardCount(currentCardCount + 1);
 
-            if (BLACK_CARDS.includes(data.cards[0].suit)) {
+            if (data && BLACK_CARDS.includes(data.cards[0].suit)) {
                 setBlackCardsDrawn(blackCardsDrawn + 1);
                 setBlackProbability(CalcSuitMatchProbability(blackCardsDrawn));
             }
