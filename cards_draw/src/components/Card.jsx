@@ -54,7 +54,7 @@ const Card = (props) => {
             setNewCard(data);
 
             //Check for a Suit Match and display the message
-            if (data.cards[0].suit == newCard.cards[0].suit) {
+            if (data && data.cards[0].suit == newCard.cards[0].suit) {
                 setMatchMessage(SUIT_MATCH);
                 setSuitMatches(suitMatches + 1);
             }
@@ -128,7 +128,7 @@ const Card = (props) => {
                 }
             </div>
             <div className="message-box">
-                Card {currentCardCount} of 52
+                Card {currentCardCount} of {TOTAL_DECK}
             </div>
             <div className="message-box">
                 Red Suit Probability: {redProbability}
