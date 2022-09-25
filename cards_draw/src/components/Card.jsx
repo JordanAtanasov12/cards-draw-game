@@ -43,7 +43,13 @@ const Card = (props) => {
 
         refetch();
 
-        cardSound.play();
+        try {
+            cardSound.play();
+        }
+        catch {
+            console.log(`An error occured while playing media. Game will play with no sound`);
+        }
+
 
         //Implement NEW/OLD card logic and populate placeholders
         if (newCard == "") {
